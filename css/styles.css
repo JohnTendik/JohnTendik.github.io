@@ -1,0 +1,383 @@
+body{
+
+	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
+
+	background:url('../img/broken_noise.png');
+
+	transition:all 0.3s;
+
+}
+
+*{
+	box-sizing:border-box;
+}
+
+a{
+	color: #e9ad64;
+	text-decoration: none;	
+}
+
+a:hover{
+	text-shadow:0 0 4px #000;
+}
+
+a.btn{
+	padding:8px 16px;
+	background:#262626;
+	color:white;
+	border-radius:5px;
+	display: inline-block;
+}
+
+h1,h2,h3,h4,h5{
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+}
+
+h1{
+	font-size: 48px;
+}
+
+h2{
+	font-size: 26px;
+}
+
+h1.hero{
+	color:white;
+}
+
+header{
+	display: -webkit-flex;
+   display: flex;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+   
+	position: relative;
+}
+
+.container{
+	max-width: 1024px;
+	margin:0 auto;
+}
+
+header figure{
+	margin: 0;
+}
+
+header img.menuicon{
+	display:none;
+}
+
+header nav{
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	width:100%;
+}
+
+header nav ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+header nav ul li{
+	display: inline-block;
+	padding:0 14px;
+}
+
+header nav ul li a{
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition:color 0.3s;
+}
+
+header nav ul li a:hover{
+	color: #e9ad64;
+	text-decoration: none;	
+}
+
+header nav ul li a.active{
+	color: #e9ad64;
+}
+
+header div.socialNav img{
+	margin-left:14px;
+}
+
+header .menuicon{
+	cursor: pointer;
+}
+
+#home{
+	text-align: center;
+	color:white;
+	padding:40px 0;
+}
+
+#home .heroContent{
+	display:flex;
+	justify-content:center;
+	text-align: left;
+}
+
+#home .heroContent h1{
+	margin:0;
+}
+
+#home .heroContent h1:first-child{
+	text-align: right;
+	margin-right: 8px;
+}
+
+#home .heroContent h1:last-child{
+	color:#e9ad64;
+}
+
+#home .heroh2{
+	font-weight: normal;
+	font-size: 26px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#about{
+	background:white;
+	padding:40px 0;	
+}
+
+#about .aboutContainer{
+	display: -webkit-flex;
+   display: flex;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+   /* You can set flex-wrap and flex-direction individually */
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   /* Or do it all in one line with flex flow */
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
+   /* tweak the where items line up on the row */
+   /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
+   -webkit-align-content: flex-end;
+   align-content: flex-end;
+}
+
+#about figure{
+	max-width:40%;
+	text-align: center;
+}
+
+#about .aboutContent{
+	max-width:50%;
+}
+
+#about figure img{
+	width:60%;
+}
+
+#portfolio{
+	background:#f8f8f8;
+	padding:40px 0;	
+}
+
+#portfolio .portContainer{
+	display: -webkit-flex;
+   display: flex;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+   /* You can set flex-wrap and flex-direction individually */
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   /* Or do it all in one line with flex flow */
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
+   /* tweak the where items line up on the row */
+   /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
+   -webkit-align-content: flex-end;
+   align-content: flex-end;
+}
+
+#portfolio figure{
+	max-width:40%;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+#portfolio figure img{
+	width:80%;
+	position: relative;
+	right:-500px;
+}
+
+#portfolio figure img.slideOutImg{
+
+	animation-name: slideOutImg;
+    animation-duration: 0.5s;
+}
+
+#portfolio figure img.slideInImg{
+	right:0;
+	animation-name: slideInImg;
+    animation-duration: 0.5s;
+}
+
+#portfolio h2, #portfolio h3{
+	text-align: center;
+}
+
+#portfolio .portcontanet{
+	max-width: 50%;
+	position: relative;
+	overflow: hidden;
+}
+
+#portfolio h3{
+	font-family: 'Open Sans' sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	position: relative;
+}
+
+#portfolio .portcontanet .portItem{
+	max-width: 100%;
+	position: absolute;
+	left:-500px;
+	opacity: 0;
+}
+
+#portfolio .portItem.slideOut{
+	animation-name: slideOut;
+    animation-duration: 1s;
+}
+#portfolio .portItem.slideIn{
+	left:0;
+	opacity: 1;
+	position: relative;
+	animation-name: slideIn;
+    animation-duration: 1.5s;
+}
+
+#portfolio .portcontanet .portItem:not(.slideIn){
+	position:absolute;	
+	top:0;
+	display:none;
+	left:-500px;
+	opacity: 0;
+}
+
+
+#portfolio h3 span.prev{
+	width: 9px;
+    height: 17px;
+    display: block;
+    position: absolute;
+    background: url('../img/arrow.png');
+    background-size: 9px 17px;
+    background-repeat: no-repeat;
+    left: 0px;
+    top: -7px;
+    cursor: pointer;
+    padding: 14px;
+    background-position: 50%;
+}
+
+#portfolio h3 span.next{
+    width: 9px;
+    height: 17px;
+    display: block;
+    position: absolute;
+    background: url('../img/arrow.png');
+    background-repeat: no-repeat;
+    background-size: 9px 17px;
+    right: 0px;
+    top: -7px;
+    padding: 14px;
+    background-position: 50%;
+    cursor: pointer;
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+
+#portfolio .ulContainer{
+	display:flex;	
+	margin-bottom: 24px;
+}
+
+#portfolio .ulContainer ul{
+	margin:0;	
+}
+
+#contact{
+	padding:40px 0;	
+	color:#f8f8f8;
+	text-align: center;
+}
+
+#contact ul.socialLinks{
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+
+#contact ul.socialLinks li{
+	display: inline-block;
+	margin-right:14px;
+	margin-bottom: 24px;
+}
+
+
+
+
+@keyframes slideOut {
+    from {
+		opacity: 1;
+    }
+    to {
+		opacity: 0;
+    }
+}
+
+@keyframes slideIn {
+    from {
+		opacity: 0;
+    }
+    to {
+		opacity: 1;
+    }
+}
+
+@keyframes slideOutImg {
+    from {
+		right:0;
+		opacity: 1;
+    }
+    to {
+		right:-500px;
+		opacity: 0;
+    }
+}
+
+@keyframes slideInImg {
+    from {
+		right:-500px;
+		opacity: 0;
+    }
+    to {
+		right:0px;
+		opacity: 1;
+    }
+}
