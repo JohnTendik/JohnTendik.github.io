@@ -339,6 +339,10 @@ header .menuicon{
 	margin-bottom: 24px;
 }
 
+#contact small:first-of-type{
+	color:#949494;
+}
+
 
 
 
