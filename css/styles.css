@@ -116,7 +116,7 @@ header .menuicon{
 #home{
 	text-align: center;
 	color:white;
-	padding:40px 0;
+	padding:70px 0;
 }
 
 #home .heroContent{
@@ -146,7 +146,7 @@ header .menuicon{
 
 #about{
 	background:white;
-	padding:40px 0;	
+	padding:70px 0;	
 }
 
 #about .aboutContainer{
@@ -185,7 +185,7 @@ header .menuicon{
 
 #portfolio{
 	background:#f8f8f8;
-	padding:40px 0;	
+	padding:70px 0;	
 }
 
 #portfolio .portContainer{
@@ -322,7 +322,7 @@ header .menuicon{
 }
 
 #contact{
-	padding:40px 0;	
+	padding:70px 0;	
 	color:#f8f8f8;
 	text-align: center;
 }
