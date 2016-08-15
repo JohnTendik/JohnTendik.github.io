@@ -89,3 +89,44 @@ function animatePortImage(){
 		portImageItem.className = "slideInImg";
 	},300);
 }
+
+
+var aboutSection = document.getElementById("about"),
+	portSection = document.getElementById("portfolio"),
+	contactSection = document.getElementById("contact");
+
+function posTop() {
+    return typeof window.pageYOffset != 'undefined' ? window.pageYOffset: document.documentElement.scrollTop? document.documentElement.scrollTop: document.body.scrollTop? document.body.scrollTop:0;
+}
+
+// Event Listener for the fades
+if(window.attachEvent) {
+    window.attachEvent('scroll', function(event1) {
+        fadeInOutSection(event1);
+    });
+}
+else if(window.addEventListener) {
+    window.addEventListener('scroll', function(event1) {
+        fadeInOutSection(event1);
+    }, false);
+}
+else {
+    alert("Please update your web browser to the current standards.");
+}
+
+function fadeInOutSection(evnt){
+
+	if(posTop() > aboutSection.offsetTop / 3)
+		aboutSection.className = "fadeIn";
+	else
+		aboutSection.className = "fadeOut";
+
+	if(posTop() > portSection.offsetTop / 2)
+		portSection.className = "fadeIn";
+	else
+		portSection.className = "";
+
+	//alert(posTop(),posTop());
+	//console.log(evnt.srcElement.activeElement.scrollTop);
+
+}

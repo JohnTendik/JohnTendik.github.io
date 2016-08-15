@@ -147,6 +147,7 @@ header .menuicon{
 #about{
 	background:white;
 	padding:70px 0;	
+	overflow: hidden;
 }
 
 #about .aboutContainer{
@@ -173,10 +174,16 @@ header .menuicon{
 #about figure{
 	max-width:40%;
 	text-align: center;
+	-webkit-transform: translateX(-3000px); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+      -ms-transform: translateX(-3000px); /* IE 9 */
+          transform: translateX(-3000px); /* IE 10, Fx 16+, Op 12.1+ */
 }
 
 #about .aboutContent{
 	max-width:50%;
+	-webkit-transform: translateX(3000px); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+      		-ms-transform: translateX(3000px); /* IE 9 */
+          	transform: translateX(3000px);
 }
 
 #about figure img{
@@ -186,6 +193,8 @@ header .menuicon{
 #portfolio{
 	background:#f8f8f8;
 	padding:70px 0;	
+	opacity: 0;
+	transition:opacity 0.5s;
 }
 
 #portfolio .portContainer{
@@ -343,16 +352,36 @@ header .menuicon{
 	color:#949494;
 }
 
+section#portfolio.fadeIn{
+	animation-name: fadeIn;
+    animation-duration: 0.5s;
+    opacity: 1!important;
+}
 
+section#about.fadeOut figure{
+	animation-name: slideOutPic;
+    animation-duration: 1s;
+}
 
+section#about.fadeIn figure{
+	animation-name: slideInPic;
+    animation-duration: 0.5s;
+    -webkit-transform: translateX(-0px); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+      	-ms-transform: translateX(-0px); /* IE 9 */
+      	transform: translateX(-0px);
+}
 
-@keyframes slideOut {
-    from {
-		opacity: 1;
-    }
-    to {
-		opacity: 0;
-    }
+section#about.fadeOut .aboutContent{
+	animation-name: slideOuttxt;
+    animation-duration: 1s;
+}
+
+section#about.fadeIn .aboutContent{
+   	animation-name: slideIntxt;
+    animation-duration: 0.5s;
+    -webkit-transform: translateX(-0px); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+      	-ms-transform: translateX(-0px); /* IE 9 */
+      	transform: translateX(-0px);
 }
 
 @keyframes slideIn {
@@ -383,5 +412,75 @@ header .menuicon{
     to {
 		right:0px;
 		opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+		opacity: 0;
+    }
+    to {
+		opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+		opacity: 1;
+    }
+    to {
+		opacity: 0;
+    }
+}
+
+@keyframes slideInPic {
+    from {
+			-webkit-transform: translateX(-3000px); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+      		-ms-transform: translateX(-3000px); /* IE 9 */
+          	transform: translateX(-3000px);
+    }
+    to {
+		-webkit-transform: translateX(-0px); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+      	-ms-transform: translateX(-0px); /* IE 9 */
+      	transform: translateX(-0px);
+    }
+}
+
+@keyframes slideOutPic {
+    from {
+		-webkit-transform: translateX(-0px); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+      	-ms-transform: translateX(-0px); /* IE 9 */
+      	transform: translateX(-0px);
+    }
+    to {
+		-webkit-transform: translateX(-3000px); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+      	-ms-transform: translateX(-3000px); /* IE 9 */
+      	transform: translateX(-3000px);
+    }
+}
+
+@keyframes slideIntxt {
+    from {
+			-webkit-transform: translateX(3000px); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+      		-ms-transform: translateX(3000px); /* IE 9 */
+          	transform: translateX(3000px);
+    }
+    to {
+		-webkit-transform: translateX(-0px); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+      	-ms-transform: translateX(-0px); /* IE 9 */
+      	transform: translateX(-0px);
+    }
+}
+
+@keyframes slideOuttxt {
+    from {
+		-webkit-transform: translateX(-0px); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+      	-ms-transform: translateX(-0px); /* IE 9 */
+      	transform: translateX(-0px);
+    }
+    to {
+		-webkit-transform: translateX(3000px); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+      	-ms-transform: translateX(3000px); /* IE 9 */
+      	transform: translateX(3000px);
     }
 }
