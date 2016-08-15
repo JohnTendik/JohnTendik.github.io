@@ -366,6 +366,7 @@ section#about.fadeOut figure{
 section#about.fadeIn figure{
 	animation-name: slideInPic;
     animation-duration: 0.5s;
+    opacity: 1;
     -webkit-transform: translateX(-0px); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
       	-ms-transform: translateX(-0px); /* IE 9 */
       	transform: translateX(-0px);
