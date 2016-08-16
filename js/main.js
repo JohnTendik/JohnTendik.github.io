@@ -116,17 +116,9 @@ else {
 
 function fadeInOutSection(evnt){
 
-	if(posTop() > aboutSection.offsetTop / 3)
-		aboutSection.className = "fadeIn";
-	else
-		aboutSection.className = "fadeOut";
-
 	if(posTop() > portSection.offsetTop / 2)
 		portSection.className = "fadeIn";
 	else
 		portSection.className = "";
-
-	//alert(posTop(),posTop());
-	//console.log(evnt.srcElement.activeElement.scrollTop);
 
 }
