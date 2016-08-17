@@ -1,12 +1,8 @@
 body{
-
 	font-size: 14px;
 	font-family: 'Open Sans', sans-serif;
-
 	background:url('../img/broken_noise.png');
-
 	transition:all 0.3s;
-
 }
 
 *{
@@ -49,12 +45,11 @@ h1.hero{
 
 header{
 	display: -webkit-flex;
-   display: flex;
-   -webkit-align-items: center;
-   align-items: center;
-   -webkit-justify-content: center;
-   justify-content: center;
-   
+   	display: flex;
+   	-webkit-align-items: center;
+   	align-items: center;
+   	-webkit-justify-content: center;
+   	justify-content: center;
 	position: relative;
 }
 
@@ -107,23 +102,19 @@ header figure{
 
 #about .aboutContainer{
 	display: -webkit-flex;
-   display: flex;
-   -webkit-align-items: center;
-   align-items: center;
-   -webkit-justify-content: center;
-   justify-content: center;
-   /* You can set flex-wrap and flex-direction individually */
-   -webkit-flex-direction: row;
-   flex-direction: row;
-   -webkit-flex-wrap: wrap;
-   flex-wrap: wrap;
-   /* Or do it all in one line with flex flow */
-   -webkit-flex-flow: row wrap;
-   flex-flow: row wrap;
-   /* tweak the where items line up on the row */
-   /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
-   -webkit-align-content: flex-end;
-   align-content: flex-end;
+   	display: flex;
+   	-webkit-align-items: center;
+   	align-items: center;
+   	-webkit-justify-content: center;
+   	justify-content: center;
+   	-webkit-flex-direction: row;
+   	flex-direction: row;
+   	-webkit-flex-wrap: wrap;
+   	flex-wrap: wrap;
+   	-webkit-flex-flow: row wrap;
+   	flex-flow: row wrap;
+   	-webkit-align-content: flex-end;
+   	align-content: flex-end;
 }
 
 #about figure{
@@ -146,23 +137,19 @@ header figure{
 
 #portfolio .portContainer{
 	display: -webkit-flex;
-   display: flex;
-   -webkit-align-items: center;
-   align-items: center;
-   -webkit-justify-content: center;
-   justify-content: center;
-   /* You can set flex-wrap and flex-direction individually */
-   -webkit-flex-direction: row;
-   flex-direction: row;
-   -webkit-flex-wrap: wrap;
-   flex-wrap: wrap;
-   /* Or do it all in one line with flex flow */
-   -webkit-flex-flow: row wrap;
-   flex-flow: row wrap;
-   /* tweak the where items line up on the row */
-   /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
-   -webkit-align-content: flex-end;
-   align-content: flex-end;
+   	display: flex;
+   	-webkit-align-items: center;
+   	align-items: center;
+   	-webkit-justify-content: center;
+   	justify-content: center;
+   	-webkit-flex-direction: row;
+   	flex-direction: row;
+   	-webkit-flex-wrap: wrap;
+   	flex-wrap: wrap;
+   	-webkit-flex-flow: row wrap;
+   	flex-flow: row wrap;
+   	-webkit-align-content: flex-end;
+   	align-content: flex-end;
 }
 
 #portfolio figure{
@@ -179,15 +166,14 @@ header figure{
 }
 
 #portfolio figure img.slideOutImg{
-
 	animation-name: slideOutImg;
-    animation-duration: 0.5s;
+    	animation-duration: 0.5s;
 }
 
 #portfolio figure img.slideInImg{
 	right:0;
 	animation-name: slideInImg;
-    animation-duration: 0.5s;
+	animation-duration: 0.5s;
 }
 
 #portfolio h2, #portfolio h3{
@@ -216,14 +202,14 @@ header figure{
 
 #portfolio .portItem.slideOut{
 	animation-name: slideOut;
-    animation-duration: 1s;
+    	animation-duration: 1s;
 }
 #portfolio .portItem.slideIn{
 	left:0;
 	opacity: 1;
 	position: relative;
 	animation-name: slideIn;
-    animation-duration: 1.5s;
+    	animation-duration: 1.5s;
 }
 
 #portfolio .portcontanet .portItem:not(.slideIn){
@@ -237,35 +223,35 @@ header figure{
 
 #portfolio h3 span.prev{
 	width: 9px;
-    height: 17px;
-    display: block;
-    position: absolute;
-    background: url('../img/arrow.png');
-    background-size: 9px 17px;
-    background-repeat: no-repeat;
-    left: 0px;
-    top: -7px;
-    cursor: pointer;
-    padding: 14px;
-    background-position: 50%;
+    	height: 17px;
+    	display: block;
+    	position: absolute;
+    	background: url('../img/arrow.png');
+    	background-size: 9px 17px;
+    	background-repeat: no-repeat;
+    	left: 0px;
+    	top: -7px;
+    	cursor: pointer;
+    	padding: 14px;
+    	background-position: 50%;
 }
 
 #portfolio h3 span.next{
-    width: 9px;
-    height: 17px;
-    display: block;
-    position: absolute;
-    background: url('../img/arrow.png');
-    background-repeat: no-repeat;
-    background-size: 9px 17px;
-    right: 0px;
-    top: -7px;
-    padding: 14px;
-    background-position: 50%;
-    cursor: pointer;
-    -ms-transform: rotate(180deg); /* IE 9 */
-    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
-    transform: rotate(180deg);
+    	width: 9px;
+    	height: 17px;
+    	display: block;
+    	position: absolute;
+    	background: url('../img/arrow.png');
+    	background-repeat: no-repeat;
+    	background-size: 9px 17px;
+    	right: 0px;
+    	top: -7px;
+	padding: 14px;
+    	background-position: 50%;
+    	cursor: pointer;
+    	-ms-transform: rotate(180deg); /* IE 9 */
+    	-webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    	transform: rotate(180deg);
 }
 
 #portfolio .ulContainer{
@@ -413,11 +399,6 @@ header figure{
     }
 }
 
-/* Custom, iPhone Retina */ 
-@media only screen and (max-width : 320px) {
-
-}
-
 @keyframes example {
     from {
         opacity: 0;
@@ -439,5 +420,3 @@ header figure{
         top:-350px;
     }
 }
-
-/* The element to apply the animation to */
