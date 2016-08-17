@@ -71,40 +71,6 @@ header img.menuicon{
 	display:none;
 }
 
-header nav{
-	display:flex;
-	align-items:center;
-	justify-content:space-between;
-	width:100%;
-}
-
-header nav ul{
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
-header nav ul li{
-	display: inline-block;
-	padding:0 14px;
-}
-
-header nav ul li a{
-	color: white;
-	text-decoration: none;
-	text-transform: uppercase;
-	transition:color 0.3s;
-}
-
-header nav ul li a:hover{
-	color: #e9ad64;
-	text-decoration: none;	
-}
-
-header nav ul li a.active{
-	color: #e9ad64;
-}
-
 header div.socialNav img{
 	margin-left:14px;
 }
@@ -187,8 +153,6 @@ header .menuicon{
 #portfolio{
 	background:#f8f8f8;
 	padding:70px 0;	
-	opacity: 0;
-	transition:opacity 0.5s;
 }
 
 #portfolio .portContainer{
@@ -344,10 +308,6 @@ header .menuicon{
 
 #contact small:first-of-type{
 	color:#949494;
-}
-
-section#portfolio.fadeIn{
-    opacity: 1!important;
 }
 
 
