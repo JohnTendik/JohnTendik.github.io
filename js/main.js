@@ -1,5 +1,4 @@
 // Portfolio stuff and thangs
-
 var portList = document.getElementsByClassName("portItem"),
 	currentPort = 1,
 	currentPortItem = portList[currentPort - 1];
