@@ -65,18 +65,7 @@ header{
 
 header figure{
 	margin: 0;
-}
-
-header img.menuicon{
-	display:none;
-}
-
-header div.socialNav img{
-	margin-left:14px;
-}
-
-header .menuicon{
-	cursor: pointer;
+	margin-top:24px;
 }
 
 #home{
